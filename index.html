@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIMAnvil - The Ultimate Swiss Army Knife for OpenBIM</title>
+    <meta name="description" content="Download BIMAnvil, the premium 3D workspace for IFC data validation, spatial coordination, and IDS rule creation.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <img src="assets/logo.png" alt="BIMAnvil Logo" style="height: 32px; border-radius: 4px;"> BIM<span>Anvil</span>
+        </div>
+        <div class="nav-links">
+            <a href="#features" class="btn btn-outline" style="margin-right: 15px; border: none;">Features</a>
+            <a href="#pricing" class="btn btn-outline" style="margin-right: 15px; border: none;">Pricing</a>
+            <a href="#pricing" class="btn btn-primary">Start Free Trial</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <img src="assets/hero_bg.jpg" alt="Futuristic 3D Wireframe" class="hero-bg">
+        <div class="hero-gradient"></div>
+        <div class="hero-content">
+            <h1>The Ultimate Swiss Army Knife for OpenBIM</h1>
+            <p>Instantly validate IFC data, detect spatial clashes, and build Information Delivery Specifications (IDS) in one ultra-fast, offline Windows application.</p>
+            <div class="hero-actions">
+                <a href="#pricing" class="btn btn-primary"><i class="fas fa-download"></i> Download for Windows</a>
+                <a href="#features" class="btn btn-outline">Explore Features</a>
+            </div>
+            
+            <div style="margin-top: 40px; display: flex; justify-content: center; gap: 30px; color: var(--text-muted); font-size: 0.95rem; flex-wrap: wrap;">
+                <span class="animate-on-scroll" style="display: flex; align-items: center; gap: 8px;"><i class="fas fa-shield-alt" style="color: var(--accent);"></i> 100% Local Processing</span>
+                <span class="animate-on-scroll" style="display: flex; align-items: center; gap: 8px;"><i class="fas fa-cloud" style="color: var(--accent); position: relative;"><i class="fas fa-slash" style="position: absolute; left: 0; color: var(--text-main);"></i></i> Zero Cloud Uploads</span>
+                <span class="animate-on-scroll" style="display: flex; align-items: center; gap: 8px;"><i class="fas fa-lock" style="color: var(--accent);"></i> Total Data Privacy</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Bento Box -->
+    <section class="features" id="features">
+        <div class="section-header animate-on-scroll">
+            <h2>Everything you need. Nothing you don't.</h2>
+            <p>BIMAnvil integrates seamlessly with your favorite authoring tools, bringing validation, coordination, and repair into one beautifully designed platform.</p>
+        </div>
+
+        <div class="bento-grid">
+            
+            <div class="bento-item glass animate-on-scroll">
+                <i class="fas fa-crosshairs bento-icon"></i>
+                <div class="bento-content">
+                    <h3>Spatial Coordination Engine</h3>
+                    <p style="margin-bottom: 15px;">Enhance your OpenBIM workflow. BIMAnvil's built-in coordination workspace allows you to find spatial issues instantly before they reach the site.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> <span>Detects floating walls, slabs, and geometry.</span></li>
+                        <li><i class="fas fa-check"></i> <span>Identifies duplicate overlapping elements.</span></li>
+                        <li><i class="fas fa-check"></i> <span>Configurable gap & near-miss tolerance.</span></li>
+                        <li><i class="fas fa-check"></i> <span>Color-coded 3D visual highlighting.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bento-item glass animate-on-scroll">
+                <i class="fas fa-check-double bento-icon"></i>
+                <div class="bento-content">
+                    <h3>One-Click Auto-Repair</h3>
+                    <p style="margin-bottom: 15px;">Don't just find data errors—fix them directly inside the IFC file without sending it back to the architect.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> <span>Automatically snap geometry gaps.</span></li>
+                        <li><i class="fas fa-check"></i> <span>Fill in missing required parameters.</span></li>
+                        <li><i class="fas fa-check"></i> <span>Standardize naming conventions globally.</span></li>
+                        <li><i class="fas fa-check"></i> <span>Export the repaired, clean IFC file.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bento-item glass animate-on-scroll">
+                <i class="fas fa-file-code bento-icon"></i>
+                <div class="bento-content">
+                    <h3>Visual IDS Creator</h3>
+                    <p style="margin-bottom: 15px;">Build complex buildingSMART Information Delivery Specifications (IDS) visually, without writing a single line of XML code.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> <span>100% buildingSMART compliant XML output.</span></li>
+                        <li><i class="fas fa-check"></i> <span>Apply rules to specific IFC Entities (e.g. IfcWall).</span></li>
+                        <li><i class="fas fa-check"></i> <span>Define required Property Sets and Data Types.</span></li>
+                        <li><i class="fas fa-check"></i> <span>Apply rules instantly to the active model.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bento-item glass animate-on-scroll">
+                <i class="fas fa-tachometer-alt bento-icon"></i>
+                <div class="bento-content">
+                    <h3>Lightning Fast C++ Core</h3>
+                    <p style="margin-bottom: 15px;">Built on the battle-tested `ifcopenshell` engine to handle the largest models you can throw at it.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> <span>Parses massive federated IFC files in seconds.</span></li>
+                        <li><i class="fas fa-check"></i> <span>Operates completely offline—no cloud required.</span></li>
+                        <li><i class="fas fa-check"></i> <span>Hardware-accelerated WebGL 3D rendering.</span></li>
+                        <li><i class="fas fa-check"></i> <span>No monthly cloud storage fees.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bento-item glass animate-on-scroll">
+                <i class="fas fa-share-nodes bento-icon"></i>
+                <div class="bento-content">
+                    <h3>Native BCF Export</h3>
+                    <p style="margin-bottom: 15px;">Seamlessly integrate into your existing OpenBIM workflow by exporting issues directly to the design team.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> <span>Export clashes and validation failures as BCF.</span></li>
+                        <li><i class="fas fa-check"></i> <span>Includes exact element GUIDs for tracing.</span></li>
+                        <li><i class="fas fa-check"></i> <span>Drop files straight into Revit, Tekla, or ArchiCAD.</span></li>
+                        <li><i class="fas fa-check"></i> <span>Generates automatic camera viewpoints for clashes.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="pricing-card glass animate-on-scroll">
+            <h3>BIMAnvil PRO</h3>
+            <p style="color: var(--text-muted);">A single license for unlimited local usage.</p>
+            
+            <div class="price">
+                $240 <span>/ year</span>
+            </div>
+
+            <a href="#" class="btn btn-primary" style="margin-top: 20px; font-size: 1.1rem;">
+                <i class="fas fa-bolt"></i> Start 14-Day Free Trial
+            </a>
+            
+            <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-muted);">Cancel anytime. No credit card required for trial.</p>
+
+            <ul class="pricing-features">
+                <li><i class="fas fa-check-circle"></i> Unlimited IFC Data Validation</li>
+                <li><i class="fas fa-check-circle"></i> Full Coordination Workspace</li>
+                <li><i class="fas fa-check-circle"></i> Visual IDS Creator</li>
+                <li><i class="fas fa-check-circle"></i> Auto-Repair Algorithms</li>
+                <li><i class="fas fa-check-circle"></i> Priority Technical Support</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo" style="justify-content: center; margin-bottom: 20px;">
+            <img src="assets/logo.png" alt="BIMAnvil Logo" style="height: 32px; border-radius: 4px;"> BIM<span>Anvil</span>
+        </div>
+        <p>&copy; 2026 BIMAnvil Software. All rights reserved.</p>
+        <p style="margin-top: 15px; font-size: 0.95rem;">
+            Questions? Contact us at <a href="mailto:minabasely7@gmail.com" style="text-decoration: underline;">minabasely7@gmail.com</a>
+        </p>
+        <p style="margin-top: 10px; font-size: 0.9rem;">
+            Built for architects, engineers, and BIM coordinators.
+        </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>

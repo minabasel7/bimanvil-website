@@ -1,0 +1,390 @@
+:root {
+    --bg-main: #202124;
+    --bg-secondary: #11223A;
+    --text-main: #FFFFFF;
+    --text-muted: #8B9BB4;
+    --accent: #31FFFF;
+    --accent-hover: #248EF5;
+    --primary: #248EF5;
+    --border: #1E3A5F;
+    --glass-bg: rgba(17, 34, 58, 0.6);
+    --font-heading: 'Outfit', 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+/* Glassmorphism Utilities */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+nav.scrolled {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 15px 5%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-family: var(--font-heading);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--text-main);
+    box-shadow: 0 0 15px rgba(0, 102, 204, 0.4);
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+    color: var(--text-main); /* Prevent generic a:hover from making text invisible */
+    box-shadow: 0 0 25px rgba(33, 150, 243, 0.6);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-main); /* Prevent generic a:hover from changing text color */
+    border-color: var(--text-main);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0.5;
+}
+
+.hero-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 10, 18, 0.2) 0%, rgba(0, 10, 18, 1) 100%);
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 1;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #ffffff 0%, var(--accent) 50%, #8B9BB4 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientFlow 5s ease infinite;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Features - Bento Box */
+.features {
+    padding: 100px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.bento-item {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: transform 0.3s ease;
+}
+
+.bento-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 188, 212, 0.5);
+}
+
+
+
+.bento-icon {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.bento-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.bento-content p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.feature-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    gap: 12px;
+    font-size: 0.95rem;
+}
+
+.feature-list li i {
+    color: var(--accent);
+    margin-top: 5px; /* Adjust to align icon with first line of text */
+    flex-shrink: 0;
+}
+
+/* Pricing */
+.pricing {
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.pricing-card {
+    max-width: 450px;
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent 0%, rgba(49, 255, 255, 0.2) 25%, transparent 50%, rgba(36, 142, 245, 0.2) 75%, transparent 100%);
+    z-index: -1;
+    animation: rotateGlow 10s linear infinite;
+}
+
+.pricing-card::after {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    background: var(--glass-bg);
+    border-radius: 15px;
+    z-index: -1;
+}
+
+.pricing-card h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--accent);
+    margin: 20px 0;
+}
+
+.price span {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.pricing-features {
+    list-style: none;
+    margin: 30px 0;
+    text-align: left;
+}
+
+.pricing-features li {
+    margin-bottom: 15px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pricing-features li i {
+    color: var(--accent);
+}
+
+.pricing-card .btn {
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    padding: 40px 5%;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    margin-top: 100px;
+    color: var(--text-muted);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes rotateGlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
