@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIMAnvil - The Ultimate Swiss Army Knife for OpenBIM</title>
-    <meta name="description" content="Download BIMAnvil, the premium 3D workspace for IFC data validation, spatial coordination, and IDS rule creation.">
+    <title>BIMAnvil - The Ultimate OpenBIM Powerhouse for Validation, 4D/5D & Auto-Repair</title>
+    <meta name="description" content="Download BIMAnvil, the premium 3D desktop workspace for IFC data validation, spatial coordination, quantity takeoff (QTO), 4D/5D simulation, and IDS creation.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,12 +24,18 @@
         <div class="logo">
             <img src="assets/logo.png" alt="BIMAnvil Logo" style="height: 32px; border-radius: 4px;"> BIM<span>Anvil</span>
         </div>
-        <div class="nav-links">
-            <a href="#features" class="btn btn-outline" style="margin-right: 15px; border: none;">Features</a>
-            <a href="#pricing" class="btn btn-outline" style="margin-right: 15px; border: none;">Pricing</a>
-            <a href="https://whop.com/bim-anvil/bim-anvil-subscription" class="btn btn-outline" style="margin-right: 15px; border: none;">Buy License</a>
-            <a href="https://github.com/minabasel7/bimanvil-website/releases/download/v1.0.0/BIMAnvil_Setup.zip" class="btn btn-primary">Start Free Trial</a>
+        <div class="nav-links" id="navLinks">
+            <a href="#workspaces" class="nav-link">Workspaces</a>
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#comparison" class="nav-link">Comparison</a>
+            <a href="#pricing" class="nav-link">Pricing</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+            <a href="https://whop.com/bim-anvil/bim-anvil-subscription" class="btn btn-outline" style="padding: 8px 16px;">Buy License</a>
+            <a href="https://github.com/minabasel7/bimanvil-website/releases/download/v1.0.0/BIMAnvil_Setup.zip" class="btn btn-primary" style="padding: 8px 18px;"><i class="fas fa-download"></i> Free Trial</a>
         </div>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+            <i class="fas fa-bars"></i>
+        </button>
     </nav>
 
     <!-- Hero Section -->
@@ -37,26 +43,402 @@
         <img src="assets/hero_bg.jpg" alt="Futuristic 3D Wireframe" class="hero-bg">
         <div class="hero-gradient"></div>
         <div class="hero-content">
-            <h1>The Ultimate Swiss Army Knife for OpenBIM</h1>
-            <p>Instantly validate IFC data, one-click auto-repair geometry and parameters, detect spatial clashes, and build Information Delivery Specifications (IDS) in one ultra-fast, offline Windows application.</p>
-            <div class="hero-actions">
-                <a href="https://github.com/minabasel7/bimanvil-website/releases/download/v1.0.0/BIMAnvil_Setup.zip" class="btn btn-primary"><i class="fas fa-download"></i> Download for Windows</a>
-                <a href="#features" class="btn btn-outline">Explore Features</a>
+            <div class="badge-pill animate-on-scroll">
+                <span class="badge-dot"></span> Next-Gen OpenBIM & VDC Desktop Platform
+            </div>
+            <h1 class="animate-on-scroll">The Ultimate OpenBIM Powerhouse for Validation, 4D/5D & Auto-Repair</h1>
+            <p class="animate-on-scroll">Instantly audit IFC models, 1-click auto-repair geometry & missing parameters, detect void-aware clashes, extract accurate QTO quantities, and simulate 4D/5D construction timelines in one ultra-fast, 100% offline Windows desktop application.</p>
+            
+            <div class="hero-actions animate-on-scroll">
+                <a href="https://github.com/minabasel7/bimanvil-website/releases/download/v1.0.0/BIMAnvil_Setup.zip" class="btn btn-primary btn-large">
+                    <i class="fas fa-download"></i> Download Free Trial (Windows)
+                </a>
+                <a href="#workspaces" class="btn btn-outline btn-large">
+                    <i class="fas fa-desktop"></i> Explore Workspaces
+                </a>
             </div>
             
-            <div style="margin-top: 40px; display: flex; justify-content: center; gap: 30px; color: var(--text-muted); font-size: 0.95rem; flex-wrap: wrap;">
-                <span class="animate-on-scroll" style="display: flex; align-items: center; gap: 8px;"><i class="fas fa-shield-alt" style="color: var(--accent);"></i> 100% Local Processing</span>
-                <span class="animate-on-scroll" style="display: flex; align-items: center; gap: 8px;"><i class="fas fa-cloud" style="color: var(--accent); position: relative;"><i class="fas fa-slash" style="position: absolute; left: 0; color: var(--text-main);"></i></i> Zero Cloud Uploads</span>
-                <span class="animate-on-scroll" style="display: flex; align-items: center; gap: 8px;"><i class="fas fa-lock" style="color: var(--accent);"></i> Total Data Privacy</span>
+            <!-- Trust & Security Badges -->
+            <div class="trust-bar animate-on-scroll">
+                <span class="trust-item"><i class="fas fa-shield-alt"></i> 100% Local Processing</span>
+                <span class="trust-item"><i class="fas fa-ban"></i> Zero Cloud Uploads</span>
+                <span class="trust-item"><i class="fas fa-lock"></i> Total IP & Data Privacy</span>
+                <span class="trust-item"><i class="fas fa-cube"></i> buildingSMART OpenBIM Native</span>
             </div>
+
+            <!-- Sleek UI Application Mockup Window -->
+            <div class="app-mockup glass animate-on-scroll">
+                <div class="mockup-header">
+                    <div class="window-controls">
+                        <span class="dot close"></span>
+                        <span class="dot minimize"></span>
+                        <span class="dot maximize"></span>
+                    </div>
+                    <div class="mockup-title">
+                        <i class="fas fa-cube" style="color: var(--accent);"></i> BIMAnvil v1.0.0 — [Federated_Complex_Building.ifc]
+                    </div>
+                    <div class="mockup-badge">Offline Mode • Active License</div>
+                </div>
+
+                <!-- Ribbon Toolbar Mockup -->
+                <div class="mockup-ribbon">
+                    <div class="ribbon-tabs">
+                        <span class="r-tab active"><i class="fas fa-columns"></i> Layout</span>
+                        <span class="r-tab"><i class="fas fa-clipboard-check"></i> Data Validation</span>
+                        <span class="r-tab"><i class="fas fa-vector-square"></i> Geometry</span>
+                        <span class="r-tab"><i class="fas fa-crosshairs"></i> Coordination</span>
+                        <span class="r-tab"><i class="fas fa-file-code"></i> IDS Creator</span>
+                        <span class="r-tab"><i class="fas fa-compress-arrows-alt"></i> Model Slimmer</span>
+                        <span class="r-tab"><i class="fas fa-calculator"></i> Quantity Takeoff</span>
+                        <span class="r-tab"><i class="fas fa-clock"></i> 4D Simulation</span>
+                        <span class="r-tab"><i class="fas fa-dollar-sign"></i> 5D Costing</span>
+                    </div>
+                    <div class="ribbon-toolbar">
+                        <div class="tb-group">
+                            <span class="tb-btn"><i class="fas fa-folder-open"></i> Open</span>
+                            <span class="tb-btn"><i class="fas fa-save"></i> Save As</span>
+                            <span class="tb-btn"><i class="fas fa-layer-group"></i> Federate</span>
+                        </div>
+                        <div class="tb-group">
+                            <span class="tb-btn"><i class="fas fa-play" style="color: var(--accent);"></i> Run Audit</span>
+                            <span class="tb-btn"><i class="fas fa-magic" style="color: #10B981;"></i> Auto-Repair</span>
+                            <span class="tb-btn"><i class="fas fa-share-square"></i> Export BCF</span>
+                            <span class="tb-btn"><i class="fas fa-file-excel"></i> Export COBie</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App Main Viewport Grid Mockup -->
+                <div class="mockup-body">
+                    <div class="mockup-sidebar left">
+                        <div class="panel-head">PROJECT HIERARCHY & VALIDATION</div>
+                        <div class="tree-mock">
+                            <div class="tree-item"><i class="fas fa-building"></i> Medical Center Tower</div>
+                            <div class="tree-item indent-1"><i class="fas fa-layer-group"></i> Level 01 - Ground</div>
+                            <div class="tree-item indent-2 active-tree"><i class="fas fa-square" style="color: var(--accent);"></i> IfcWall [Ext_Concrete_300]</div>
+                            <div class="tree-item indent-2"><i class="fas fa-cube"></i> IfcSlab [Floor_Slab_200]</div>
+                            <div class="tree-item indent-1"><i class="fas fa-layer-group"></i> Level 02 - Upper</div>
+                            <div class="tree-item indent-2"><i class="fas fa-columns"></i> IfcColumn [Col_400x400]</div>
+                        </div>
+                        <div class="mini-card-mock">
+                            <div class="card-title">Coordination Heatmap</div>
+                            <div class="stat-num" style="color: #EF4444;">12 Hard Clashes</div>
+                            <div class="stat-sub">0 False Positives (Void-Aware)</div>
+                        </div>
+                    </div>
+
+                    <div class="mockup-viewport">
+                        <div class="viewport-overlay-top">
+                            <span><i class="fas fa-eye"></i> Viewport 3D (WebGL 60 FPS)</span>
+                            <span class="mode-tag"><i class="fas fa-crop-alt"></i> Section Box [BX] Active</span>
+                        </div>
+                        
+                        <!-- 3D Graphic Canvas Representation -->
+                        <div class="viewport-canvas-graphic">
+                            <div class="clash-indicator a"><i class="fas fa-bolt"></i> HVAC Duct #4028</div>
+                            <div class="clash-indicator b"><i class="fas fa-shield-alt"></i> Shear Wall #1094</div>
+                            <div class="hud-box">
+                                <div class="hud-line"><strong>Clash Severity:</strong> High (Penetration: 85 mm)</div>
+                                <div class="hud-line"><strong>Recommended Action:</strong> Request Sleeve Provision</div>
+                            </div>
+                        </div>
+
+                        <div class="viewport-timeline-hud">
+                            <i class="fas fa-play-circle" style="color: var(--accent); font-size: 1.2rem;"></i>
+                            <div class="timeline-bar">
+                                <div class="timeline-progress" style="width: 48%;"></div>
+                            </div>
+                            <span style="font-size: 0.85rem; font-weight: bold; color: var(--accent);">📅 15 Oct 2026 (48.2%)</span>
+                        </div>
+                    </div>
+
+                    <div class="mockup-sidebar right">
+                        <div class="panel-head">PROPERTIES & 1-CLICK REPAIR</div>
+                        <div class="prop-table-mock">
+                            <div class="p-row"><span>GlobalId</span><span>2bX8qW$11...</span></div>
+                            <div class="p-row"><span>IFC Entity</span><span>IfcWall</span></div>
+                            <div class="p-row"><span>Net Volume</span><span>14.28 m³</span></div>
+                            <div class="p-row"><span>Net Area</span><span>47.60 m²</span></div>
+                            <div class="p-row"><span>IsExternal</span><span class="badge-err">Missing (Required)</span></div>
+                        </div>
+                        <button class="mockup-repair-btn">
+                            <i class="fas fa-wrench"></i> Auto-Repair Parameter
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workspaces Interactive Showcase Section -->
+    <section class="workspaces-section" id="workspaces">
+        <div class="section-header animate-on-scroll">
+            <h2>Seven Dedicated Workspaces. Zero Clutter.</h2>
+            <p>Every phase of your OpenBIM lifecycle has its own specialized, distraction-free environment.</p>
+        </div>
+
+        <!-- Interactive Workspace Switcher Tabs -->
+        <div class="workspace-tabs-container animate-on-scroll">
+            <button class="ws-tab-btn active" data-target="ws-val">
+                <i class="fas fa-clipboard-check"></i>
+                <span>Data & Geometry Validation</span>
+            </button>
+            <button class="ws-tab-btn" data-target="ws-coord">
+                <i class="fas fa-crosshairs"></i>
+                <span>Spatial Coordination</span>
+            </button>
+            <button class="ws-tab-btn" data-target="ws-qto">
+                <i class="fas fa-calculator"></i>
+                <span>Quantity Takeoff (QTO)</span>
+            </button>
+            <button class="ws-tab-btn" data-target="ws-sim">
+                <i class="fas fa-clock"></i>
+                <span>4D Construction Simulation</span>
+            </button>
+            <button class="ws-tab-btn" data-target="ws-cost">
+                <i class="fas fa-dollar-sign"></i>
+                <span>5D Cost Estimation</span>
+            </button>
+            <button class="ws-tab-btn" data-target="ws-ids">
+                <i class="fas fa-file-code"></i>
+                <span>Visual IDS Creator</span>
+            </button>
+            <button class="ws-tab-btn" data-target="ws-slimmer">
+                <i class="fas fa-compress-arrows-alt"></i>
+                <span>Model Slimmer</span>
+            </button>
+        </div>
+
+        <!-- Workspace Content Panels -->
+        <div class="workspace-content-box glass animate-on-scroll">
+            
+            <!-- Panel 1: Data & Geometry Validation -->
+            <div class="ws-panel active" id="ws-val">
+                <div class="ws-panel-grid">
+                    <div class="ws-text">
+                        <span class="ws-badge">Precision Auditing</span>
+                        <h3>Deep Semantic, Schema & Geometric Inspection</h3>
+                        <p>Audit building models against strict buildingSMART standards, local code requirements, and naming conventions without slow cloud queues.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> <span><strong>35+ Automated Rule Engines:</strong> Schema conformance, Life Safety, MEP clearances, and containment checks.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Geometric Integrity:</strong> Detects floating walls, disjointed slabs, uncontained spatial objects, and micro-overlaps.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>1-Click Auto-Repair Engine:</strong> Fixes missing parameters, corrects coordinate placement, and snaps geometry gaps directly in the IFC file.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Native BCF 2.1 & COBie Export:</strong> Export audit issues with 3D camera viewpoints directly to Revit, Archicad, or Solibri.</span></li>
+                        </ul>
+                    </div>
+                    <div class="ws-visual">
+                        <div class="metric-card-box">
+                            <div class="m-card">
+                                <div class="m-label">Auditing Speed</div>
+                                <div class="m-val" style="color: var(--accent);">50k elems / sec</div>
+                                <div class="m-sub">100% C++ Engine</div>
+                            </div>
+                            <div class="m-card">
+                                <div class="m-label">Auto-Repair Success</div>
+                                <div class="m-val" style="color: #10B981;">99.4%</div>
+                                <div class="m-sub">Lossless IFC Rewrite</div>
+                            </div>
+                        </div>
+                        <div class="callout-box">
+                            <i class="fas fa-lightbulb" style="color: #F59E0B;"></i>
+                            <span>"Fix model errors before sending files back to consultants, saving days of design coordination back-and-forth."</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 2: Spatial Coordination -->
+            <div class="ws-panel" id="ws-coord">
+                <div class="ws-panel-grid">
+                    <div class="ws-text">
+                        <span class="ws-badge">Clash Matrix & Federation</span>
+                        <h3>Void-Aware Clash Detection with Zero False Positives</h3>
+                        <p>Federate architectural, structural, and MEP models in real time with hardware-accelerated collision testing and intelligent penetration depth classification.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Void & Sleeve Awareness:</strong> Automatically recognizes designed wall/slab openings (<code>IfcOpeningElement</code>) to eliminate hundreds of false alarms.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Dual-Color Contrast Highlighting:</strong> Conflict pairs illuminate in high-contrast Crimson Red vs. Cyan Blue.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Auto Section Box (BX):</strong> Automatically tightens a 3D bounding box around clashes with smooth camera zooming.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Interactive Clash Matrix Heatmap:</strong> Click any cell to filter clashes by discipline pair or level.</span></li>
+                        </ul>
+                    </div>
+                    <div class="ws-visual">
+                        <div class="metric-card-box">
+                            <div class="m-card">
+                                <div class="m-label">False Positive Drop</div>
+                                <div class="m-val" style="color: #10B981;">-85%</div>
+                                <div class="m-sub">Via Void Awareness</div>
+                            </div>
+                            <div class="m-card">
+                                <div class="m-label">Auto Section Box</div>
+                                <div class="m-val" style="color: var(--accent);">1-Click [BX]</div>
+                                <div class="m-sub">Adaptive 3D Padding</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 3: Quantity Takeoff (QTO) -->
+            <div class="ws-panel" id="ws-qto">
+                <div class="ws-panel-grid">
+                    <div class="ws-text">
+                        <span class="ws-badge">Automated BOQ</span>
+                        <h3>Instant Quantity Extraction & Grouping Pivot</h3>
+                        <p>Eliminate manual measurement errors. Extract exact volumes ($\text{m}^3$), surface areas ($\text{m}^2$), linear lengths ($\text{m}$), and counts directly from IFC geometry and base quantity sets.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Standard IFC Quantities:</strong> Reads <code>Qto_WallBaseQuantities</code>, <code>Qto_SlabBaseQuantities</code>, and fallback solid geometry.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Multi-Axis Pivot Grouping:</strong> Group quantities by Story/Level, Material, IFC Entity, or custom classifications.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Interactive 3D Takeoff:</strong> Select any quantity row to isolate and visually inspect those exact elements in 3D.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Excel (.xlsx) & CSV Export:</strong> 1-click export of structured Bill of Quantities with formulas.</span></li>
+                        </ul>
+                    </div>
+                    <div class="ws-visual">
+                        <div class="metric-card-box">
+                            <div class="m-card">
+                                <div class="m-label">Accuracy Rate</div>
+                                <div class="m-val" style="color: var(--accent);">100% Exact</div>
+                                <div class="m-sub">Direct Solids Parsing</div>
+                            </div>
+                            <div class="m-card">
+                                <div class="m-label">Export Formats</div>
+                                <div class="m-val" style="color: #10B981;">XLSX / CSV</div>
+                                <div class="m-sub">Multi-Tab Workbooks</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 4: 4D Construction Simulation -->
+            <div class="ws-panel" id="ws-sim">
+                <div class="ws-panel-grid">
+                    <div class="ws-text">
+                        <span class="ws-badge">4D VDC Simulation</span>
+                        <h3>Schedule Playback & Rule-Based 3D Auto-Linking</h3>
+                        <p>Connect your project Gantt schedule to the 3D model to simulate the entire construction sequence over time directly inside the WebGL viewport.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Universal Schedule Import:</strong> Supports MS Project XML, Primavera P6 XML/XER, and CSV schedules.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Rule-Based Auto-Linker:</strong> Automatically maps WBS tasks to elements by Story and Category.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>60 FPS Timeline Scrubber:</strong> Play, pause, step forward/backward, and adjust speeds from 1x to 30x.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Dynamic Visual States:</strong> Active tasks glow in Amber (<code>#F59E0B</code>), completed elements appear in Emerald (<code>#10B981</code>).</span></li>
+                        </ul>
+                    </div>
+                    <div class="ws-visual">
+                        <div class="metric-card-box">
+                            <div class="m-card">
+                                <div class="m-label">Schedule Formats</div>
+                                <div class="m-val" style="color: var(--accent);">XML / P6 / CSV</div>
+                                <div class="m-sub">Universal Importer</div>
+                            </div>
+                            <div class="m-card">
+                                <div class="m-label">Playback Performance</div>
+                                <div class="m-val" style="color: #10B981;">60 FPS</div>
+                                <div class="m-sub">Zero Framerate Lag</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 5: 5D Cost Estimation -->
+            <div class="ws-panel" id="ws-cost">
+                <div class="ws-panel-grid">
+                    <div class="ws-text">
+                        <span class="ws-badge">5D Financial Intelligence</span>
+                        <h3>Unit Rate Cards & Dynamic Cash Flow ($S$-Curves)</h3>
+                        <p>Link QTO quantities with customizable CSI MasterFormat/UniFormat rate books to generate real-time budgets and monthly cash flow forecasts.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Built-in CSI Rate Book:</strong> Pre-configured unit prices per $\text{m}^3, \text{m}^2, \text{m}$, and unit item.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Discipline Package Rollups:</strong> Live summaries for Structural, Architectural, MEP, and Envelope packages.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Cash Flow ($S$-Curve) Forecasting:</strong> Combines 5D element costs with 4D schedule dates to project monthly expenditure.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Complete Excel Budget Export:</strong> Export comprehensive cost workbooks for procurement.</span></li>
+                        </ul>
+                    </div>
+                    <div class="ws-visual">
+                        <div class="metric-card-box">
+                            <div class="m-card">
+                                <div class="m-label">Budget Updates</div>
+                                <div class="m-val" style="color: var(--accent);">Real-Time</div>
+                                <div class="m-sub">Synced with QTO Engine</div>
+                            </div>
+                            <div class="m-card">
+                                <div class="m-label">Cash Flow Curves</div>
+                                <div class="m-val" style="color: #10B981;">S-Curve %</div>
+                                <div class="m-sub">Monthly Expenditures</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 6: Visual IDS Creator -->
+            <div class="ws-panel" id="ws-ids">
+                <div class="ws-panel-grid">
+                    <div class="ws-text">
+                        <span class="ws-badge">Standardized Exchange</span>
+                        <h3>Visual buildingSMART IDS Specification Builder</h3>
+                        <p>Create, manage, and validate Information Delivery Specifications (IDS) visually without writing a single line of complex XML code.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> <span><strong>100% buildingSMART Compliant:</strong> Generates official <code>.ids</code> XML files ready for global BIM execution plans.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Applicability & Requirements Rules:</strong> Specify required entities, property sets, data types, and value constraints.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>1-Click Live Model Verification:</strong> Apply IDS profiles directly against active IFC models in seconds.</span></li>
+                        </ul>
+                    </div>
+                    <div class="ws-visual">
+                        <div class="metric-card-box">
+                            <div class="m-card">
+                                <div class="m-label">XML Coding</div>
+                                <div class="m-val" style="color: var(--accent);">0 Lines</div>
+                                <div class="m-sub">100% Visual UI</div>
+                            </div>
+                            <div class="m-card">
+                                <div class="m-label">Standards</div>
+                                <div class="m-val" style="color: #10B981;">buildingSMART</div>
+                                <div class="m-sub">Official IDS Schema</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 7: Model Slimmer -->
+            <div class="ws-panel" id="ws-slimmer">
+                <div class="ws-panel-grid">
+                    <div class="ws-text">
+                        <span class="ws-badge">Model Optimization</span>
+                        <h3>Intelligent Geometry Decimation & File Slimming</h3>
+                        <p>Tame massive multi-gigabyte IFC models. Purge unreferenced metadata, decimate redundant mesh vertices, and reduce file sizes by up to 50% without quality loss.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Unused Entity Purging:</strong> Strips orphan property sets, invisible voids, and obsolete spatial objects.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Lossless Geometric Optimization:</strong> Merges co-planar faces and decimates dense repetitive geometry.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Ultra-Fast Saving:</strong> Exports a streamlined, ultra-lightweight IFC file ready for mobile & web viewers.</span></li>
+                        </ul>
+                    </div>
+                    <div class="ws-visual">
+                        <div class="metric-card-box">
+                            <div class="m-card">
+                                <div class="m-label">File Size Reduction</div>
+                                <div class="m-val" style="color: #10B981;">Up to 50%</div>
+                                <div class="m-sub">Lossless Optimization</div>
+                            </div>
+                            <div class="m-card">
+                                <div class="m-label">Loading Speed</div>
+                                <div class="m-val" style="color: var(--accent);">3x Faster</div>
+                                <div class="m-sub">On Web & Mobile</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <!-- Features Bento Box -->
     <section class="features" id="features">
         <div class="section-header animate-on-scroll">
-            <h2>Everything you need. Nothing you don't.</h2>
-            <p>BIMAnvil integrates seamlessly with your favorite authoring tools, bringing validation, coordination, and repair into one beautifully designed platform.</p>
+            <h2>Everything you need. Built for modern OpenBIM.</h2>
+            <p>BIMAnvil integrates seamlessly with Revit, Archicad, Tekla, and Solibri, bringing validation, coordination, takeoff, and repair under one roof.</p>
         </div>
 
         <div class="bento-grid">
@@ -64,28 +446,32 @@
             <div class="bento-item glass animate-on-scroll">
                 <i class="fas fa-crosshairs bento-icon"></i>
                 <div class="bento-content">
-                    <h3>Spatial Coordination Engine</h3>
-                    <p style="margin-bottom: 15px;">Enhance your OpenBIM workflow. BIMAnvil's built-in coordination workspace allows you to find spatial issues instantly before they reach the site.</p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> <span>Detects floating walls, slabs, and geometry.</span></li>
-                        <li><i class="fas fa-check"></i> <span>Identifies duplicate overlapping elements.</span></li>
-                        <li><i class="fas fa-check"></i> <span>Configurable gap & near-miss tolerance.</span></li>
-                        <li><i class="fas fa-check"></i> <span>Color-coded 3D visual highlighting.</span></li>
-                    </ul>
+                    <h3>Void-Aware Coordination</h3>
+                    <p>Detect true physical clashes with zero false positives. Filters designed openings and calculates penetration depth in millimeters.</p>
                 </div>
             </div>
 
             <div class="bento-item glass animate-on-scroll">
-                <i class="fas fa-check-double bento-icon"></i>
+                <i class="fas fa-magic bento-icon"></i>
                 <div class="bento-content">
-                    <h3>One-Click Auto-Repair</h3>
-                    <p style="margin-bottom: 15px;">Don't just find data errors—fix them directly inside the IFC file without sending it back to the architect.</p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> <span>Automatically snap geometry gaps.</span></li>
-                        <li><i class="fas fa-check"></i> <span>Fill in missing required parameters.</span></li>
-                        <li><i class="fas fa-check"></i> <span>Standardize naming conventions globally.</span></li>
-                        <li><i class="fas fa-check"></i> <span>Export the repaired, clean IFC file.</span></li>
-                    </ul>
+                    <h3>1-Click Auto-Repair</h3>
+                    <p>Fix geometry gaps, normalize parameters, and standardize naming conventions directly inside the IFC file with one click.</p>
+                </div>
+            </div>
+
+            <div class="bento-item glass animate-on-scroll">
+                <i class="fas fa-calculator bento-icon"></i>
+                <div class="bento-content">
+                    <h3>Automated QTO Takeoff</h3>
+                    <p>Extract volume, area, length, and item counts grouped by Story, Material, or Class with 1-click Excel workbook export.</p>
+                </div>
+            </div>
+
+            <div class="bento-item glass animate-on-scroll">
+                <i class="fas fa-clock bento-icon"></i>
+                <div class="bento-content">
+                    <h3>4D & 5D VDC Simulation</h3>
+                    <p>Import MS Project/P6 schedules, simulate construction playback in 3D, and generate monthly cash flow expenditure curves.</p>
                 </div>
             </div>
 
@@ -93,73 +479,185 @@
                 <i class="fas fa-file-code bento-icon"></i>
                 <div class="bento-content">
                     <h3>Visual IDS Creator</h3>
-                    <p style="margin-bottom: 15px;">Build complex buildingSMART Information Delivery Specifications (IDS) visually, without writing a single line of XML code.</p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> <span>100% buildingSMART compliant XML output.</span></li>
-                        <li><i class="fas fa-check"></i> <span>Apply rules to specific IFC Entities (e.g. IfcWall).</span></li>
-                        <li><i class="fas fa-check"></i> <span>Define required Property Sets and Data Types.</span></li>
-                        <li><i class="fas fa-check"></i> <span>Apply rules instantly to the active model.</span></li>
-                    </ul>
+                    <p>Build 100% buildingSMART-compliant Information Delivery Specifications without writing any XML code.</p>
                 </div>
             </div>
 
             <div class="bento-item glass animate-on-scroll">
-                <i class="fas fa-tachometer-alt bento-icon"></i>
+                <i class="fas fa-compress-arrows-alt bento-icon"></i>
                 <div class="bento-content">
-                    <h3>Lightning Fast C++ Core</h3>
-                    <p style="margin-bottom: 15px;">Built on the battle-tested `ifcopenshell` engine to handle the largest models you can throw at it.</p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> <span>Parses massive federated IFC files in seconds.</span></li>
-                        <li><i class="fas fa-check"></i> <span>Operates completely offline—no cloud required.</span></li>
-                        <li><i class="fas fa-check"></i> <span>Hardware-accelerated WebGL 3D rendering.</span></li>
-                        <li><i class="fas fa-check"></i> <span>No monthly cloud storage fees.</span></li>
-                    </ul>
+                    <h3>Model Slimmer & Purge</h3>
+                    <p>Optimize massive IFC models, purge unreferenced metadata, and reduce file sizes by up to 50% for fast web/mobile viewing.</p>
                 </div>
             </div>
 
             <div class="bento-item glass animate-on-scroll">
                 <i class="fas fa-share-nodes bento-icon"></i>
                 <div class="bento-content">
-                    <h3>Native BCF Export</h3>
-                    <p style="margin-bottom: 15px;">Seamlessly integrate into your existing OpenBIM workflow by exporting issues directly to the design team.</p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> <span>Export clashes and validation failures as BCF.</span></li>
-                        <li><i class="fas fa-check"></i> <span>Includes exact element GUIDs for tracing.</span></li>
-                        <li><i class="fas fa-check"></i> <span>Drop files straight into Revit, Tekla, or ArchiCAD.</span></li>
-                        <li><i class="fas fa-check"></i> <span>Generates automatic camera viewpoints for clashes.</span></li>
-                    </ul>
+                    <h3>Universal Handover & BCF</h3>
+                    <p>Export issues to BCF 2.1, COBie 2.4, glTF, and OBJ with exact element GUIDs and automated 3D viewpoints.</p>
+                </div>
+            </div>
+
+            <div class="bento-item glass animate-on-scroll">
+                <i class="fas fa-tachometer-alt bento-icon"></i>
+                <div class="bento-content">
+                    <h3>100% Local & Offline</h3>
+                    <p>Runs directly on your Windows PC via high-performance C++ and WebAssembly. Zero cloud latency and total data privacy.</p>
                 </div>
             </div>
 
         </div>
     </section>
 
+    <!-- Comparison Section -->
+    <section class="comparison-section" id="comparison">
+        <div class="section-header animate-on-scroll">
+            <h2>Why Leading Engineers Choose BIMAnvil</h2>
+            <p>Compare BIMAnvil against traditional, expensive cloud-locked platforms.</p>
+        </div>
+
+        <div class="comparison-table-wrapper glass animate-on-scroll">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Capability</th>
+                        <th class="highlight-col">BIMAnvil</th>
+                        <th>Traditional Cloud Platforms</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Data Privacy & Security</strong></td>
+                        <td class="highlight-col"><i class="fas fa-check-circle" style="color: #10B981;"></i> 100% Local (Zero Cloud Uploads)</td>
+                        <td><i class="fas fa-times-circle" style="color: #EF4444;"></i> Uploaded to external cloud servers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pricing</strong></td>
+                        <td class="highlight-col"><i class="fas fa-check-circle" style="color: #10B981;"></i> <strong>$240 / year (Fixed)</strong></td>
+                        <td><i class="fas fa-times-circle" style="color: #EF4444;"></i> $1,500 – $4,500+ / seat / year</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Offline Capability</strong></td>
+                        <td class="highlight-col"><i class="fas fa-check-circle" style="color: #10B981;"></i> Works 100% Offline Anywhere</td>
+                        <td><i class="fas fa-times-circle" style="color: #EF4444;"></i> Requires continuous internet connection</td>
+                    </tr>
+                    <tr>
+                        <td><strong>1-Click Auto-Repair Engine</strong></td>
+                        <td class="highlight-col"><i class="fas fa-check-circle" style="color: #10B981;"></i> Included (Direct IFC write)</td>
+                        <td><i class="fas fa-times-circle" style="color: #EF4444;"></i> None (Must send back to model author)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4D/5D VDC & Takeoffs</strong></td>
+                        <td class="highlight-col"><i class="fas fa-check-circle" style="color: #10B981;"></i> Built-in (QTO, Timeline, Cash Flow)</td>
+                        <td><i class="fas fa-times-circle" style="color: #EF4444;"></i> Separate expensive add-on licenses</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Visual IDS Creator</strong></td>
+                        <td class="highlight-col"><i class="fas fa-check-circle" style="color: #10B981;"></i> 100% buildingSMART XML</td>
+                        <td><i class="fas fa-times-circle" style="color: #EF4444;"></i> Proprietary vendor lock-in formats</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
     <!-- Pricing Section -->
     <section class="pricing" id="pricing">
         <div class="pricing-card glass animate-on-scroll">
-            <h3>BIMAnvil</h3>
-            <p style="color: var(--text-muted);">A single license for unlimited local usage.</p>
+            <div class="badge-pill" style="margin-bottom: 15px;">
+                <i class="fas fa-crown" style="color: #F59E0B;"></i> Full Professional Suite
+            </div>
+            <h3>BIMAnvil Annual License</h3>
+            <p style="color: var(--text-muted);">A single license for unlimited local usage across all 7 workspaces.</p>
             
             <div class="price">
                 $240 <span>/ year</span>
             </div>
 
-            <a href="https://whop.com/bim-anvil/bim-anvil-subscription" class="btn btn-primary" style="margin-top: 20px; font-size: 1.1rem; margin-right: 10px;">
-                <i class="fas fa-shopping-cart"></i> Buy License
-            </a>
-            <a href="https://github.com/minabasel7/bimanvil-website/releases/download/v1.0.0/BIMAnvil_Setup.zip" class="btn btn-outline" style="margin-top: 20px; font-size: 1.1rem;">
-                <i class="fas fa-download"></i> Download Free Trial
-            </a>
+            <div class="pricing-actions">
+                <a href="https://whop.com/bim-anvil/bim-anvil-subscription" class="btn btn-primary btn-large" style="margin-bottom: 12px;">
+                    <i class="fas fa-shopping-cart"></i> Buy Annual License
+                </a>
+                <a href="https://github.com/minabasel7/bimanvil-website/releases/download/v1.0.0/BIMAnvil_Setup.zip" class="btn btn-outline btn-large">
+                    <i class="fas fa-download"></i> Download Free Trial
+                </a>
+            </div>
             
-            <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-muted);">Cancel anytime. No credit card required for trial.</p>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-muted);">Instant activation. Cancel anytime. No credit card required for trial.</p>
 
             <ul class="pricing-features">
-                <li><i class="fas fa-check-circle"></i> Unlimited IFC Data Validation</li>
-                <li><i class="fas fa-check-circle"></i> Full Coordination Workspace</li>
-                <li><i class="fas fa-check-circle"></i> Visual IDS Creator</li>
-                <li><i class="fas fa-check-circle"></i> Auto-Repair Algorithms</li>
-                <li><i class="fas fa-check-circle"></i> Priority Technical Support</li>
+                <li><i class="fas fa-check-circle"></i> Unlimited IFC Data & Geometry Validation</li>
+                <li><i class="fas fa-check-circle"></i> Void-Aware Spatial Coordination & Clash Matrix</li>
+                <li><i class="fas fa-check-circle"></i> Automated Quantity Takeoff (QTO) & Excel Export</li>
+                <li><i class="fas fa-check-circle"></i> 4D Timeline Simulation & 5D Cost Modeling</li>
+                <li><i class="fas fa-check-circle"></i> Visual IDS Specification Creator (buildingSMART)</li>
+                <li><i class="fas fa-check-circle"></i> 1-Click Auto-Repair Algorithms</li>
+                <li><i class="fas fa-check-circle"></i> Model Slimmer & Optimizer</li>
+                <li><i class="fas fa-check-circle"></i> Priority Technical Support & Regular Updates</li>
             </ul>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="faq-section" id="faq">
+        <div class="section-header animate-on-scroll">
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know about BIMAnvil licensing and technical specifications.</p>
+        </div>
+
+        <div class="faq-container animate-on-scroll">
+            
+            <div class="faq-item glass">
+                <div class="faq-question">
+                    <span>Does BIMAnvil require an internet connection to run?</span>
+                    <i class="fas fa-chevron-down faq-chevron"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>No. BIMAnvil is a 100% native Windows desktop application. All model parsing, geometric calculations, clash detection, takeoffs, and auto-repairs are computed locally on your CPU/GPU. Your project data and intellectual property never leave your machine.</p>
+                </div>
+            </div>
+
+            <div class="faq-item glass">
+                <div class="faq-question">
+                    <span>Which IFC schemas and versions are supported?</span>
+                    <i class="fas fa-chevron-down faq-chevron"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>BIMAnvil fully supports <strong>IFC2X3</strong>, <strong>IFC4</strong>, and <strong>IFC4X3</strong> standard schemas. You can also validate and convert models between different versions seamlessly.</p>
+                </div>
+            </div>
+
+            <div class="faq-item glass">
+                <div class="faq-question">
+                    <span>Can I export issues back to Revit, Archicad, or Tekla?</span>
+                    <i class="fas fa-chevron-down faq-chevron"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes. BIMAnvil includes native <strong>BCF 2.1 (BIM Collaboration Format)</strong> and <strong>COBie 2.4</strong> exporters. When you export an issue or clash, it captures exact element GUIDs and camera viewpoints that load directly into your authoring software.</p>
+                </div>
+            </div>
+
+            <div class="faq-item glass">
+                <div class="faq-question">
+                    <span>How does the free trial work?</span>
+                    <i class="fas fa-chevron-down faq-chevron"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>You can download the full installer directly from our website without entering a credit card. The trial gives you full access to explore the workspaces, inspect models, and run audits.</p>
+                </div>
+            </div>
+
+            <div class="faq-item glass">
+                <div class="faq-question">
+                    <span>What are the system requirements?</span>
+                    <i class="fas fa-chevron-down faq-chevron"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>BIMAnvil runs on <strong>Windows 10 / Windows 11 (64-bit)</strong>. We recommend 8 GB of RAM (16 GB+ for massive federated models) and any modern dedicated or integrated GPU with WebGL / OpenGL support.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -170,10 +668,10 @@
         </div>
         <p>&copy; 2026 BIMAnvil Software. All rights reserved.</p>
         <p style="margin-top: 15px; font-size: 0.95rem;">
-            Questions? Contact us at <a href="mailto:hello@bimanvil.com" style="text-decoration: underline;">hello@bimanvil.com</a>
+            Questions or Enterprise Licensing? Contact us at <a href="mailto:hello@bimanvil.com" style="text-decoration: underline;">hello@bimanvil.com</a>
         </p>
-        <p style="margin-top: 10px; font-size: 0.9rem;">
-            Built for architects, engineers, and BIM coordinators.
+        <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);">
+            Engineered for BIM Managers, General Contractors, Architects & VDC Teams.
         </p>
     </footer>
 
