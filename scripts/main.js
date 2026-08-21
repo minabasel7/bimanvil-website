@@ -118,4 +118,25 @@ document.addEventListener('DOMContentLoaded', () => {
             heroBg.style.transform = `translateY(${scrollVal * 0.35}px)`;
         });
     }
+
+    // 8. 1-Click Copy Email to Clipboard
+    const copyEmailBtn = document.getElementById('copyEmailBtn');
+    const copyBtnLabel = document.getElementById('copyBtnLabel');
+    if (copyEmailBtn && copyBtnLabel) {
+        copyEmailBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText('hello@bimanvil.com').then(() => {
+                const originalHtml = copyBtnLabel.innerHTML;
+                copyBtnLabel.textContent = 'Copied!';
+                copyEmailBtn.style.borderColor = '#10B981';
+                copyEmailBtn.style.color = '#10B981';
+                setTimeout(() => {
+                    copyBtnLabel.innerHTML = originalHtml;
+                    copyEmailBtn.style.borderColor = '';
+                    copyEmailBtn.style.color = '';
+                }, 2000);
+            }).catch(err => {
+                window.location.href = 'mailto:hello@bimanvil.com';
+            });
+        });
+    }
 });

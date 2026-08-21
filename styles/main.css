@@ -770,13 +770,134 @@ nav.scrolled {
     padding-top: 14px;
 }
 
+/* Contact & Community Support Section */
+.contact-section {
+    padding: 80px 5%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    padding: 45px;
+    text-align: center;
+    border-radius: 16px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.contact-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.contact-header p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 650px;
+    margin: 0 auto 28px auto;
+}
+
+.contact-pills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.contact-pill {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid var(--border);
+    padding: 7px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #CBD5E1;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.25s ease;
+}
+
+.contact-pill:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.email-action-box {
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    border-radius: 12px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 650px;
+    margin: 0 auto 20px auto;
+    flex-wrap: wrap;
+}
+
+.email-display {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.email-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.contact-meta {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    flex-wrap: wrap;
+}
+
+.contact-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
 /* Footer */
 footer {
-    padding: 50px 5%;
+    padding: 60px 5% 40px 5%;
     text-align: center;
     border-top: 1px solid var(--border);
-    margin-top: 80px;
+    margin-top: 60px;
     color: var(--text-muted);
+    background: rgba(11, 17, 32, 0.6);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+.footer-prompt a:hover {
+    color: #BAE6FD !important;
 }
 
 /* Animations */
