@@ -139,4 +139,52 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // 9. Interactive Blender-Style Exporter Mockup Demo
+    const studioFileRows = document.querySelectorAll('.studio-files-panel .file-row');
+    const namingInput = document.querySelector('.naming-input-box input');
+    const bumpBtn = document.querySelector('.name-bump-btn');
+    const sidebarItems = document.querySelectorAll('.studio-sidebar-panel .sidebar-item');
+
+    if (studioFileRows.length > 0 && namingInput) {
+        studioFileRows.forEach(row => {
+            row.addEventListener('click', () => {
+                studioFileRows.forEach(r => r.classList.remove('selected'));
+                row.classList.add('selected');
+                const nameEl = row.querySelector('.file-name');
+                if (nameEl) {
+                    const fileName = nameEl.textContent.trim();
+                    if (fileName.endsWith('.ifc')) {
+                        namingInput.value = fileName;
+                    }
+                }
+            });
+        });
+    }
+
+    if (bumpBtn && namingInput) {
+        bumpBtn.addEventListener('click', () => {
+            const currentVal = namingInput.value;
+            const versionMatch = currentVal.match(/_v(\d+)/i);
+            if (versionMatch) {
+                const num = parseInt(versionMatch[1], 10);
+                const nextNum = String(num + 1).padStart(versionMatch[1].length, '0');
+                namingInput.value = currentVal.replace(versionMatch[0], `_v${nextNum}`);
+            } else {
+                namingInput.value = currentVal.replace(/\.ifc$/i, '_v02.ifc');
+            }
+            bumpBtn.textContent = 'Bumped!';
+            setTimeout(() => { bumpBtn.textContent = '+1 Bump'; }, 1000);
+        });
+    }
+
+    if (sidebarItems.length > 0) {
+        sidebarItems.forEach(item => {
+            item.addEventListener('click', () => {
+                sidebarItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+    }
 });
+
