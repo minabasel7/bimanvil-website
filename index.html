@@ -449,165 +449,18 @@
             <p>Export with total filesystem control inside a single integrated studio window. Zero modal dialog chaos, tailored presets for every BIM ecosystem, and 100% material preservation.</p>
         </div>
 
-        <!-- Studio Mockup Card -->
-        <div class="exporter-mockup-wrapper glass animate-on-scroll">
-            <div class="exporter-window-frame">
-                <!-- Window Header -->
-                <div class="mockup-header">
-                    <div class="window-controls">
-                        <span class="dot close"></span>
-                        <span class="dot minimize"></span>
-                        <span class="dot maximize"></span>
-                    </div>
-                    <div class="mockup-title">
-                        <i class="fas fa-file-export" style="color: var(--accent);"></i>
-                        BIMAnvil Unified Export Studio — [Save As / Transcode]
-                    </div>
-                    <div class="mockup-badge">
-                        <i class="fas fa-bolt"></i> Zero Popups
-                    </div>
-                </div>
-
-                <!-- Studio Top Action / Breadcrumb Bar -->
-                <div class="studio-topbar">
-                    <div class="studio-breadcrumbs">
-                        <span class="crumb-root"><i class="fas fa-hard-drive"></i> D:</span>
-                        <i class="fas fa-chevron-right crumb-sep"></i>
-                        <span class="crumb">BIM_Projects</span>
-                        <i class="fas fa-chevron-right crumb-sep"></i>
-                        <span class="crumb">MetroTower_Phase2</span>
-                        <i class="fas fa-chevron-right crumb-sep"></i>
-                        <span class="crumb active">Deliverables_IFC4</span>
-                    </div>
-                    <div class="studio-top-actions">
-                        <button class="studio-btn-ghost"><i class="fas fa-folder-plus"></i> New Folder</button>
-                        <button class="studio-btn-ghost"><i class="fas fa-bookmark"></i> Bookmark</button>
-                        <button class="studio-btn-ghost"><i class="fas fa-rotate"></i></button>
-                    </div>
-                </div>
-
-                <!-- Studio Main Content: 3 Columns -->
-                <div class="studio-body-grid">
-                    
-                    <!-- Col 1: Quick Access & Drives -->
-                    <div class="studio-sidebar-panel">
-                        <div class="sidebar-block-title">Drives & System</div>
-                        <div class="sidebar-item"><i class="fas fa-hard-drive"></i> Local Disk (C:)</div>
-                        <div class="sidebar-item active"><i class="fas fa-hard-drive"></i> Projects (D:)</div>
-                        <div class="sidebar-item"><i class="fas fa-network-wired"></i> Shared Storage (Z:)</div>
-                        
-                        <div class="sidebar-block-title" style="margin-top: 18px;">Bookmarks</div>
-                        <div class="sidebar-item"><i class="fas fa-folder-open"></i> Project Root</div>
-                        <div class="sidebar-item"><i class="fas fa-folder"></i> IFC_Submissions</div>
-                        <div class="sidebar-item"><i class="fas fa-folder"></i> MEP_Coordinated</div>
-                        <div class="sidebar-item"><i class="fas fa-folder"></i> Solibri_Audited</div>
-                    </div>
-
-                    <!-- Col 2: In-Place File Browser View -->
-                    <div class="studio-files-panel">
-                        <div class="files-header-row">
-                            <span class="col-name">Name</span>
-                            <span class="col-size">Size</span>
-                            <span class="col-date">Modified</span>
-                        </div>
-                        <div class="file-list-items">
-                            <div class="file-row">
-                                <span class="file-name"><i class="fas fa-folder" style="color: #F59E0B;"></i> Archive_v03</span>
-                                <span class="file-size">--</span>
-                                <span class="file-date">Today, 10:14 AM</span>
-                            </div>
-                            <div class="file-row">
-                                <span class="file-name"><i class="fas fa-cube" style="color: var(--accent);"></i> MetroTower_Arch_v03.ifc</span>
-                                <span class="file-size">142.4 MB</span>
-                                <span class="file-date">Yesterday</span>
-                            </div>
-                            <div class="file-row">
-                                <span class="file-name"><i class="fas fa-cube" style="color: #10B981;"></i> MetroTower_Struct_v04.ifc</span>
-                                <span class="file-size">88.6 MB</span>
-                                <span class="file-date">Oct 12</span>
-                            </div>
-                            <div class="file-row">
-                                <span class="file-name"><i class="fas fa-cube" style="color: #EC4899;"></i> MetroTower_MEP_v02.ifc</span>
-                                <span class="file-size">195.1 MB</span>
-                                <span class="file-date">Oct 11</span>
-                            </div>
-                            <div class="file-row selected">
-                                <span class="file-name"><i class="fas fa-cube" style="color: var(--accent);"></i> MetroTower_Federated_v04.ifc</span>
-                                <span class="file-size">310.2 MB</span>
-                                <span class="file-date">Selected (Click-to-Name)</span>
-                            </div>
-                        </div>
-                        
-                        <!-- Click-to-Name / File Name Input -->
-                        <div class="studio-naming-bar">
-                            <span class="naming-label">File:</span>
-                            <div class="naming-input-box">
-                                <input type="text" value="MetroTower_Federated_v05.ifc" readonly>
-                                <button class="name-bump-btn" title="Auto-increment version">+1 Bump</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Col 3: Export & Transcoder Settings Inspector -->
-                    <div class="studio-inspector-panel">
-                        <div class="inspector-title"><i class="fas fa-sliders-h"></i> Transcode Settings</div>
-                        
-                        <div class="form-group-mini">
-                            <label>Target IFC Schema:</label>
-                            <div class="mini-select-box">
-                                <span class="select-val">IFC4 Reference View (1.2)</span>
-                                <i class="fas fa-chevron-down"></i>
-                            </div>
-                        </div>
-
-                        <div class="form-group-mini">
-                            <label>Vendor Optimization Profile:</label>
-                            <div class="mini-select-box">
-                                <span class="select-val">Autodesk Revit & Solibri</span>
-                                <i class="fas fa-chevron-down"></i>
-                            </div>
-                        </div>
-
-                        <div class="checkbox-group-mini">
-                            <div class="check-item">
-                                <i class="fas fa-check-square" style="color: #10B981;"></i>
-                                <span>100% Color & Material Preservation</span>
-                            </div>
-                            <div class="check-item">
-                                <i class="fas fa-check-square" style="color: #10B981;"></i>
-                                <span>Compress to .ifczip (Save ~65%)</span>
-                            </div>
-                            <div class="check-item">
-                                <i class="fas fa-check-square" style="color: #10B981;"></i>
-                                <span>Purge Unreferenced Orphan Psets</span>
-                            </div>
-                            <div class="check-item">
-                                <i class="fas fa-check-square" style="color: #10B981;"></i>
-                                <span>Preserve Persistent GUIDs</span>
-                            </div>
-                        </div>
-
-                        <button class="btn btn-primary btn-export-action">
-                            <i class="fas fa-save"></i> Export IFC Deliverable
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- 4 Pillars Feature Cards -->
+        <!-- Exporter Capabilities Cards Grid -->
         <div class="exporter-features-grid">
             <div class="exp-card glass animate-on-scroll">
                 <div class="exp-icon-box"><i class="fas fa-window-maximize"></i></div>
                 <h3>Zero Secondary Popups</h3>
-                <p>Never wrestle with clunky Windows Explorer dialogs or forgotten default paths. In-place folder creation, drive jumps, and settings happen in one view.</p>
+                <p>Never wrestle with clunky OS dialogs or lost default directories. Direct in-place folder creation, drive switching (C:, D:, network shares), and export settings all live in one streamlined view.</p>
             </div>
 
             <div class="exp-card glass animate-on-scroll">
                 <div class="exp-icon-box" style="color: #10B981;"><i class="fas fa-palette"></i></div>
                 <h3>100% Material & Color Integrity</h3>
-                <p>Solves the industry-wide bug where transcoding between IFC2X3, IFC4, and IFC4X3 wipes surface colors. Preserves 100% of <code>IfcStyledItem</code> and RGB definitions.</p>
+                <p>Solves the industry-wide open-source bug where transcoding between IFC2X3, IFC4, and IFC4X3 wipes surface colors. Preserves 100% of <code>IfcStyledItem</code> and RGB definitions.</p>
             </div>
 
             <div class="exp-card glass animate-on-scroll">
@@ -619,7 +472,19 @@
             <div class="exp-card glass animate-on-scroll">
                 <div class="exp-icon-box" style="color: #8B5CF6;"><i class="fas fa-i-cursor"></i></div>
                 <h3>Click-to-Name & Bookmarks</h3>
-                <p>Click any existing file in the directory to instantly clone its base name, bump version numbers with a single click, and bookmark frequent project drives.</p>
+                <p>Click any existing model in the directory to instantly clone its base name, bump version codes (+1 Bump) with a single click, and bookmark frequent project drives.</p>
+            </div>
+
+            <div class="exp-card glass animate-on-scroll">
+                <div class="exp-icon-box" style="color: #06B6D4;"><i class="fas fa-file-zipper"></i></div>
+                <h3>High-Ratio .ifczip Output</h3>
+                <p>Direct compressed <code>.ifczip</code> export reduces file sizes by up to 65%, enabling rapid transfer, seamless cloud storage sync, and lag-free field tablet loading.</p>
+            </div>
+
+            <div class="exp-card glass animate-on-scroll">
+                <div class="exp-icon-box" style="color: #EC4899;"><i class="fas fa-broom"></i></div>
+                <h3>Hierarchy & Pset Sanitization</h3>
+                <p>Automatically prune unreferenced orphan property sets, invisible voids, and obsolete spatial objects to guarantee clean, lightweight, audit-ready deliverables.</p>
             </div>
         </div>
     </section>
