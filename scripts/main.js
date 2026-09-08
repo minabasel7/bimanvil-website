@@ -110,16 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 7. Parallax Effect for Hero Background
-    const heroBg = document.querySelector('.hero-bg');
-    if (heroBg) {
-        window.addEventListener('scroll', () => {
-            const scrollVal = window.scrollY;
-            heroBg.style.transform = `translateY(${scrollVal * 0.35}px)`;
-        });
-    }
-
-    // 8. 1-Click Copy Email to Clipboard
+    // 7. 1-Click Copy Email to Clipboard
     const copyEmailBtn = document.getElementById('copyEmailBtn');
     const copyBtnLabel = document.getElementById('copyBtnLabel');
     if (copyEmailBtn && copyBtnLabel) {
