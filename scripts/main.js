@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     
+    // Initialize Lucide Icons
+    if (window.lucide) {
+        lucide.createIcons();
+    }
+
     // 1. Navbar Scroll Effect
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => {
@@ -16,13 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileToggle && navLinks) {
         mobileToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            const icon = mobileToggle.querySelector('i');
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+            const isOpen = navLinks.classList.contains('active');
+            mobileToggle.innerHTML = isOpen 
+                ? '<i data-lucide="x"></i>' 
+                : '<i data-lucide="menu"></i>';
+            if (window.lucide) {
+                lucide.createIcons();
             }
         });
     }
@@ -46,6 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     panel.classList.add('active');
                 }
             });
+
+            // Re-render any icons inside freshly active panel
+            if (window.lucide) {
+                lucide.createIcons();
+            }
         });
     });
 
@@ -76,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     entry.target.classList.add('visible');
                 }, delay);
-                delay += 100;
+                delay += 80;
                 observer.unobserve(entry.target);
             }
         });
@@ -97,9 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (navLinks && navLinks.classList.contains('active')) {
                     navLinks.classList.remove('active');
                     if (mobileToggle) {
-                        const icon = mobileToggle.querySelector('i');
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
+                        mobileToggle.innerHTML = '<i data-lucide="menu"></i>';
+                        if (window.lucide) lucide.createIcons();
                     }
                 }
                 target.scrollIntoView({
@@ -110,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 7. 1-Click Copy Email to Clipboard
+    // 7. Direct Copy Email to Clipboard
     const copyEmailBtn = document.getElementById('copyEmailBtn');
     const copyBtnLabel = document.getElementById('copyBtnLabel');
     if (copyEmailBtn && copyBtnLabel) {
@@ -118,8 +126,8 @@ document.addEventListener('DOMContentLoaded', () => {
             navigator.clipboard.writeText('hello@bimanvil.com').then(() => {
                 const originalHtml = copyBtnLabel.innerHTML;
                 copyBtnLabel.textContent = 'Copied!';
-                copyEmailBtn.style.borderColor = '#10B981';
-                copyEmailBtn.style.color = '#10B981';
+                copyEmailBtn.style.borderColor = 'var(--accent-hover)';
+                copyEmailBtn.style.color = 'var(--accent-hover)';
                 setTimeout(() => {
                     copyBtnLabel.innerHTML = originalHtml;
                     copyEmailBtn.style.borderColor = '';
@@ -131,4 +139,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
