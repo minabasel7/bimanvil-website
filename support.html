@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support &amp; Licensing Help - BIMAnvil</title>
+    <meta name="description" content="Technical support, Freemius license key management, workstation seat transfers, and Windows system requirements for BIMAnvil.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bimanvil.com/support">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/assets/favicon-192x192.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="/" class="logo" style="text-decoration: none;">
+            <img src="assets/logo.png" alt="BIMAnvil Logo" style="height: 32px; border-radius: 4px;"> BIM<span>Anvil</span>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="/#workspaces" class="nav-link">Workspaces</a>
+            <a href="/#features" class="nav-link">Features</a>
+            <a href="/#pricing" class="nav-link">Pricing</a>
+            <a href="/support" class="nav-link" style="color: #FFFFFF;">Support</a>
+            <a href="/terms" class="nav-link">Terms</a>
+            <a href="https://checkout.freemius.com/app/45900/plan/80815/" class="btn btn-outline" style="padding: 8px 16px;">Buy License</a>
+            <a href="https://github.com/minabasel7/bimanvil-website/releases/download/v1.0.0/BIMAnvil_Setup.exe" class="btn btn-primary" style="padding: 8px 18px;"><i data-lucide="download"></i> Free Trial</a>
+        </div>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+            <i data-lucide="menu"></i>
+        </button>
+    </nav>
+
+    <header class="legal-hero">
+        <div class="section-eyebrow" style="margin-bottom: 10px;">Customer &amp; Developer Support</div>
+        <h1>Technical Support &amp; Licensing</h1>
+        <p class="legal-meta">Direct email support from BIMAnvil Software &bull; Typical response within 12 business hours</p>
+        <div class="legal-tabs">
+            <a href="/terms" class="legal-tab">Terms &amp; EULA</a>
+            <a href="/privacy" class="legal-tab">Privacy Policy</a>
+            <a href="/refund-policy" class="legal-tab">Refund Policy</a>
+            <a href="/support" class="legal-tab active">Support</a>
+        </div>
+    </header>
+
+    <main class="legal-container">
+        <div class="legal-card">
+            <h2>1. Contact Support Directly</h2>
+            <p>All technical bug triage, IFC compatibility questions, license transfers, and volume deployment inquiries go directly to our engineering team:</p>
+
+            <div class="email-action-box" style="margin-top: 16px;">
+                <div class="email-display">
+                    <i data-lucide="mail"></i>
+                    <span id="supportEmailText">hello@bimanvil.com</span>
+                </div>
+                <div class="email-buttons">
+                    <a href="mailto:hello@bimanvil.com" class="btn btn-primary">
+                        <i data-lucide="send"></i> Send Email
+                    </a>
+                    <button class="btn btn-outline" id="copyEmailBtn" title="Copy Email to Clipboard">
+                        <i data-lucide="copy"></i> <span id="copyBtnLabel">Copy Address</span>
+                    </button>
+                </div>
+            </div>
+
+            <h2>2. License Keys, Invoices &amp; Seat Transfers (Freemius)</h2>
+            <ul>
+                <li><strong>Activate a License:</strong> After completing checkout via Freemius, check your email for your license key, then enter it inside BIMAnvil's activation dialog.</li>
+                <li><strong>Move to a New Computer:</strong> Release your previous workstation seat from the <strong>Freemius Customer Portal</strong> (linked in your purchase receipt) or email <a href="mailto:hello@bimanvil.com">hello@bimanvil.com</a> with your order email.</li>
+                <li><strong>Invoices &amp; Subscription Cancellation:</strong> Download VAT invoices or cancel auto-renewal directly inside your Freemius Customer Portal with zero penalty.</li>
+            </ul>
+
+            <h2>3. System Requirements</h2>
+            <ul>
+                <li><strong>Operating System:</strong> Windows 10 or Windows 11 (64-bit)</li>
+                <li><strong>Memory:</strong> 8 GB RAM minimum (16 GB+ recommended for large federated IFC models)</li>
+                <li><strong>Graphics:</strong> Modern dedicated or integrated GPU supporting OpenGL / WebGL</li>
+                <li><strong>Supported Schemas:</strong> <code>IFC2X3</code>, <code>IFC4</code>, and <code>IFC4X3</code></li>
+            </ul>
+
+            <h2>4. Reporting a Defect or Issue</h2>
+            <p>To help us reproduce and resolve issues quickly, please include:</p>
+            <ul>
+                <li>Your BIMAnvil version (e.g., <code>v1.0.0</code> from <a href="https://github.com/minabasel7/bimanvil-website/releases/tag/v1.0.0" target="_blank" rel="noopener">GitHub Releases</a>) and Windows version;</li>
+                <li>What action you were performing (e.g., rule ID, coordination test, or export format);</li>
+                <li>Screenshots or exact error details (please do not send confidential project IFC models unless anonymized or cleared by your organization).</li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo" style="justify-content: center; margin-bottom: 16px;">
+                <img src="assets/logo.png" alt="BIMAnvil Logo" style="height: 32px; border-radius: 4px;"> BIM<span>Anvil</span>
+            </div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/support">Support</a>
+                <a href="/terms">Terms &amp; EULA</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/refund-policy">Refund Policy</a>
+                <a href="https://github.com/minabasel7/bimanvil-website/releases/tag/v1.0.0" target="_blank">Releases (v1.0.0)</a>
+            </div>
+            <div class="footer-guarantee" style="margin: 16px auto 12px auto; font-size: 0.85rem; color: #94A3B8; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); padding: 8px 16px; border-radius: 6px;">
+                <i data-lucide="shield-check" style="width: 16px; height: 16px; color: var(--accent-hover);"></i>
+                <span>Payments securely processed via <strong>Freemius</strong> (Merchant of Record).</span>
+            </div>
+            <p style="margin-top: 10px; font-size: 0.88rem; color: var(--text-dim);">
+                &copy; 2026 BIMAnvil Software (Egypt). All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        if (window.lucide) { lucide.createIcons(); }
+    </script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
