@@ -119,23 +119,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 7. Direct Copy Email to Clipboard
-    const copyEmailBtn = document.getElementById('copyEmailBtn');
-    const copyBtnLabel = document.getElementById('copyBtnLabel');
-    if (copyEmailBtn && copyBtnLabel) {
-        copyEmailBtn.addEventListener('click', () => {
-            navigator.clipboard.writeText('hello@bimanvil.com').then(() => {
-                const originalHtml = copyBtnLabel.innerHTML;
-                copyBtnLabel.textContent = 'Copied!';
-                copyEmailBtn.style.borderColor = 'var(--accent-hover)';
-                copyEmailBtn.style.color = 'var(--accent-hover)';
+    const copyButtons = document.querySelectorAll('.copy-email-btn, #copyEmailBtn');
+    copyButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const email = btn.getAttribute('data-email')
+                || (document.getElementById('supportEmailText')?.textContent?.trim())
+                || 'support@bimanvil.com';
+            const labelEl = btn.querySelector('span');
+            navigator.clipboard.writeText(email).then(() => {
+                if (labelEl) {
+                    const originalText = labelEl.textContent;
+                    labelEl.textContent = 'Copied!';
+                    setTimeout(() => {
+                        labelEl.textContent = originalText;
+                    }, 2000);
+                }
+                btn.style.borderColor = 'var(--accent-hover)';
+                btn.style.color = 'var(--accent-hover)';
                 setTimeout(() => {
-                    copyBtnLabel.innerHTML = originalHtml;
-                    copyEmailBtn.style.borderColor = '';
-                    copyEmailBtn.style.color = '';
+                    btn.style.borderColor = '';
+                    btn.style.color = '';
                 }, 2000);
-            }).catch(err => {
-                window.location.href = 'mailto:hello@bimanvil.com';
+            }).catch(() => {
+                window.location.href = `mailto:${email}`;
             });
         });
-    }
+    });
 });

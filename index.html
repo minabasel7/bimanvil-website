@@ -54,6 +54,11 @@
         "name": "BIMAnvil",
         "url": "https://bimanvil.com/",
         "email": "hello@bimanvil.com",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "support@bimanvil.com"
+        },
         "logo": "https://bimanvil.com/assets/logo.png"
       }
     }
@@ -701,7 +706,7 @@
                     <i data-lucide="chevron-down" class="faq-chevron"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>A single $249 annual license gives you unlimited local access to all 8 specialized workspaces with zero seat surcharges or feature gates. Licenses are delivered immediately upon checkout via <strong>Freemius</strong> (our authorized global Merchant of Record) with automatic VAT/sales tax invoicing. If you switch to a new laptop or workstation, you can release your previous machine seat from the Freemius customer portal or by emailing <a href="mailto:hello@bimanvil.com">hello@bimanvil.com</a>.</p>
+                    <p>A single $249 annual license gives you unlimited local access to all 8 specialized workspaces with zero seat surcharges or feature gates. Licenses are delivered immediately upon checkout via <strong>Freemius</strong> (our authorized global Merchant of Record) with automatic VAT/sales tax invoicing. If you switch to a new laptop or workstation, you can release your previous machine seat from the Freemius customer portal or by emailing <a href="mailto:support@bimanvil.com">support@bimanvil.com</a>.</p>
                 </div>
             </div>
 
@@ -746,17 +751,38 @@
                 </div>
             </div>
 
-            <!-- Direct Console Action Box -->
+            <!-- Direct Console Action Boxes -->
+            <div class="email-action-box">
+                <div class="email-display">
+                    <i data-lucide="life-buoy"></i>
+                    <div>
+                        <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent-hover); font-family: var(--font-mono);">Technical Support &amp; Licensing</div>
+                        <span id="supportPrimaryEmailText">support@bimanvil.com</span>
+                    </div>
+                </div>
+                <div class="email-buttons">
+                    <a href="mailto:support@bimanvil.com" class="btn btn-primary">
+                        <i data-lucide="send"></i> Email Support
+                    </a>
+                    <button class="btn btn-outline copy-email-btn" data-email="support@bimanvil.com" title="Copy Support Email to Clipboard">
+                        <i data-lucide="copy"></i> <span>Copy Address</span>
+                    </button>
+                </div>
+            </div>
+
             <div class="email-action-box">
                 <div class="email-display">
                     <i data-lucide="mail"></i>
-                    <span id="supportEmailText">hello@bimanvil.com</span>
+                    <div>
+                        <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); font-family: var(--font-mono);">General &amp; Enterprise Inquiries</div>
+                        <span id="supportEmailText">hello@bimanvil.com</span>
+                    </div>
                 </div>
                 <div class="email-buttons">
-                    <a href="mailto:hello@bimanvil.com" class="btn btn-primary">
+                    <a href="mailto:hello@bimanvil.com" class="btn btn-outline">
                         <i data-lucide="send"></i> Send Inquiry
                     </a>
-                    <button class="btn btn-outline" id="copyEmailBtn" title="Copy Email to Clipboard">
+                    <button class="btn btn-outline copy-email-btn" id="copyEmailBtn" data-email="hello@bimanvil.com" title="Copy Email to Clipboard">
                         <i data-lucide="copy"></i> <span id="copyBtnLabel">Copy Address</span>
                     </button>
                 </div>
@@ -791,7 +817,7 @@
             </div>
 
             <p class="footer-prompt" style="margin: 20px auto; max-width: 800px; font-size: 0.95rem; color: #E2E8F0; line-height: 1.6;">
-                For technical defect triage, custom BEP rules, or volume deployment inquiries, reach out directly at <a href="mailto:hello@bimanvil.com" style="color: var(--accent-hover); text-decoration: underline; font-weight: 600;">hello@bimanvil.com</a>
+                For technical support, license transfers, or defect triage, email <a href="mailto:support@bimanvil.com" style="color: var(--accent-hover); text-decoration: underline; font-weight: 600;">support@bimanvil.com</a>. For general or enterprise inquiries, reach out at <a href="mailto:hello@bimanvil.com" style="color: var(--accent-hover); text-decoration: underline; font-weight: 600;">hello@bimanvil.com</a>.
             </p>
 
             <div class="footer-guarantee" style="margin: 20px auto 14px auto; font-size: 0.85rem; color: #94A3B8; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); padding: 8px 16px; border-radius: 6px;">
