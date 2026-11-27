@@ -953,6 +953,65 @@ footer {
     color: #FFFFFF;
 }
 
+/* Social Media Links */
+.social-links-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.footer-social {
+    margin: 4px auto 20px auto;
+}
+
+.contact-social-box {
+    margin: 22px 0 20px 0;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-social-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 14px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    font-weight: 500;
+    line-height: 1;
+    transition: all 0.2s ease;
+}
+
+.social-link:hover {
+    color: #FFFFFF;
+    background: rgba(56, 189, 248, 0.08);
+    border-color: var(--border-hover);
+    transform: translateY(-1px);
+}
+
+.social-link svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+}
+
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(6px); }
